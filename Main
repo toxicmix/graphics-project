@@ -13,7 +13,6 @@ class Main {
   
     window.setTitle("deck of cards");
     window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-   
     
     Color c = new Color(255, 255, 255);
     window.setBackground(c);
