@@ -1,0 +1,25 @@
+import javax.swing.JFrame;
+import java.awt.Color;
+class Main {
+    public static void main(String[] args) {
+        
+    drawingComponent DC = new drawingComponent();
+
+    JFrame window = new JFrame();
+    window.setVisible(false);
+    
+    window.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+    window.setUndecorated(false);
+  
+    window.setTitle("deck of cards");
+    window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+   
+    
+    Color c = new Color(255, 255, 255);
+    window.setBackground(c);
+
+    window.add(DC);
+    window.setVisible(true);
+    
+  }
+}
