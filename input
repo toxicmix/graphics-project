@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class input{
+    private int suit;
+    private int number;
+
+    public input(){
+        Scanner scan = new Scanner(System.in); 
+        
+        System.out.println("enter a number correlating to the suit you want. your options: square(1), circle(2), hollow square(3), hollow circle(4).");
+        int in1 = scan.nextInt();
+    
+        boolean bool1 = true;
+
+        if(in1 < 1 || in1 > 4){
+            bool1 = false;
+            while(!bool1){
+                System.out.println("invalid number");
+                in1 = scan.nextInt();
+                if(in1 > 0 && in1 < 5){
+                    break;
+                }
+            }
+        }
+    
+        System.out.println("what number do you want?(no face cards 1-10)");
+        int in2 = scan.nextInt();
+    
+        boolean bool2 = true;
+
+        if(in2 < 1 || in2 > 10){
+            bool2 = false;
+            while(!bool2){
+                System.out.println("invalid number");
+                in2 = scan.nextInt();
+                if(in2 > 0 && in2 < 11){
+                    break;
+                }
+            }
+        }
+         
+        suit = in1;
+        number = in2;
+    }
+
+    public int getSuit(){
+        return suit;
+      }
+    public int getNum(){
+        return number;
+      }
+}
