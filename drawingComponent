@@ -1,0 +1,651 @@
+import java.awt.*;
+import java.awt.geom.*;
+
+import javax.swing.JComponent;
+public class drawingComponent extends JComponent{
+    public void paintComponent(Graphics g) {
+        Graphics2D g2 = (Graphics2D) g;
+        
+        Color c = new Color(0, 255, 0);
+        Font font = new Font("sansserif", Font.BOLD, 40);
+        Font inverFont = new Font("sansserif", Font.BOLD, -40);
+        
+        g2.setColor(c);
+        g2.setFont(font);
+
+        input input = new input();
+
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        // the screen height
+        int height = (int)screenSize.getHeight();
+
+        // the screen width
+        int width = (int)screenSize.getWidth();
+        
+       Rectangle r1 = new Rectangle(0, 0, width, height);
+        g2.fill(r1);
+            //Shape line = new Line2D.Float(, , , );
+        //Shape arc = new Arc2D.Float(, , , , start, 1, 1);
+        //Shape rectangle = new Rectangle2D.Float(x, y, w, h);
+        Color c2 = new Color(255, 255, 255);
+        g2.setColor(c2);
+
+        Shape rr = new RoundRectangle2D.Float((width/2)-250, (height/2)-375, 500, 750, 100, 100);
+        g2.fill(rr);
+
+
+        Color red = new Color(255, 0, 0);
+        Color black = new Color(0, 0, 0);
+        g2.setColor(black);
+
+        if(input.getSuit() == 1){
+            Shape rect1 = new Rectangle2D.Float((width/2)-225, (height/2)-300, 25, 25);
+            g2.fill(rect1);
+            
+
+            Shape rect2 = new Rectangle2D.Float((width/2)+200, (height/2)+275, 25, 25);
+            g2.fill(rect2);
+
+           g2.drawString(Integer.toString(input.getNum()), (width/2)-225, (height/2)-315);
+           g2.setFont(inverFont);
+           g2.drawString(Integer.toString(input.getNum()), (width/2)+225, (height/2)+315);
+            
+            if(input.getNum() == 1){
+                Shape rect3 = new Rectangle2D.Float((width/2-37), (height/2-37), 75, 75);
+                g2.fill(rect3);
+            }
+            else if(input.getNum() == 2){
+                Shape rect3 = new Rectangle2D.Float((width/2-37), (height/2-237), 75, 75);
+                g2.fill(rect3);
+                Shape rect4 = new Rectangle2D.Float((width/2-37), (height/2+187), 75, 75);
+                g2.fill(rect4);
+            }
+            else if(input.getNum() == 3){
+                Shape rect3 = new Rectangle2D.Float((width/2-37), (height/2-237), 75, 75);
+                g2.fill(rect3);
+                Shape rect4 = new Rectangle2D.Float((width/2-37), (height/2+187), 75, 75);
+                g2.fill(rect4);
+                Shape rect5 = new Rectangle2D.Float((width/2-37), (height/2-37), 75, 75);
+                g2.fill(rect5);
+            }
+            else if(input.getNum() == 4){
+                Shape rect3 = new Rectangle2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.fill(rect3);
+                Shape rect4 = new Rectangle2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.fill(rect4);
+                Shape rect5 = new Rectangle2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.fill(rect5);
+                Shape rect6 = new Rectangle2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.fill(rect6);
+            }
+            
+            else if(input.getNum() == 5){
+                Shape rect3 = new Rectangle2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.fill(rect3);
+                Shape rect4 = new Rectangle2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.fill(rect4);
+                Shape rect5 = new Rectangle2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.fill(rect5);
+                Shape rect6 = new Rectangle2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.fill(rect6);
+                Shape rect7 = new Rectangle2D.Float((width/2-37), (height/2-37), 75, 75);
+                g2.fill(rect7);
+            }
+            else if(input.getNum() == 6){
+                Shape rect3 = new Rectangle2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.fill(rect3);
+                Shape rect4 = new Rectangle2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.fill(rect4);
+                Shape rect5 = new Rectangle2D.Float((width/2-137), (height/2-37), 75, 75);
+                g2.fill(rect5);
+                Shape rect6 = new Rectangle2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.fill(rect6);
+                Shape rect7 = new Rectangle2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.fill(rect7);
+                Shape rect8 = new Rectangle2D.Float((width/2+63), (height/2-37), 75, 75);
+                g2.fill(rect8);
+            }
+            else if(input.getNum() == 7){
+                Shape rect3 = new Rectangle2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.fill(rect3);
+                Shape rect4 = new Rectangle2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.fill(rect4);
+                Shape rect5 = new Rectangle2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.fill(rect5);
+                Shape rect6 = new Rectangle2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.fill(rect6);
+                Shape rect7 = new Rectangle2D.Float((width/2-137), (height/2-37), 75, 75);
+                g2.fill(rect7);
+                Shape rect8 = new Rectangle2D.Float((width/2+63), (height/2-37), 75, 75);
+                g2.fill(rect8);
+                Shape rect9 = new Rectangle2D.Float((width/2-37), (height/2-137), 75, 75);
+                g2.fill(rect9);
+            }
+            else if(input.getNum() == 8){
+                Shape rect3 = new Rectangle2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.fill(rect3);
+                Shape rect4 = new Rectangle2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.fill(rect4);
+                Shape rect5 = new Rectangle2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.fill(rect5);
+                Shape rect6 = new Rectangle2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.fill(rect6);
+                Shape rect7 = new Rectangle2D.Float((width/2-137), (height/2-37), 75, 75);
+                g2.fill(rect7);
+                Shape rect8 = new Rectangle2D.Float((width/2+63), (height/2-37), 75, 75);
+                g2.fill(rect8);
+                Shape rect9 = new Rectangle2D.Float((width/2-37), (height/2-137), 75, 75);
+                g2.fill(rect9);
+                Shape rect10 = new Rectangle2D.Float((width/2-37), (height/2+77), 75, 75);
+                g2.fill(rect10);
+            }
+            else if(input.getNum() == 9){
+                Shape rect3 = new Rectangle2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.fill(rect3);
+                Shape rect4 = new Rectangle2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.fill(rect4);
+                Shape rect5 = new Rectangle2D.Float((width/2-137), (height/2-102), 75, 75);
+                g2.fill(rect5);
+                Shape rect6 = new Rectangle2D.Float((width/2-137), (height/2+42), 75, 75);
+                g2.fill(rect6);
+                Shape rect7 = new Rectangle2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.fill(rect7);
+                Shape rect8 = new Rectangle2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.fill(rect8);
+                Shape rect9 = new Rectangle2D.Float((width/2+63), (height/2-102), 75, 75);
+                g2.fill(rect9);
+                Shape rect10 = new Rectangle2D.Float((width/2+63), (height/2+42), 75, 75);
+                g2.fill(rect10);
+                Shape rect11 = new Rectangle2D.Float((width/2-37), (height/2-37), 75, 75);
+                g2.fill(rect11);
+            }
+            else if(input.getNum() == 10){
+                Shape rect3 = new Rectangle2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.fill(rect3);
+                Shape rect4 = new Rectangle2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.fill(rect4);
+                Shape rect5 = new Rectangle2D.Float((width/2-137), (height/2-102), 75, 75);
+                g2.fill(rect5);
+                Shape rect6 = new Rectangle2D.Float((width/2-137), (height/2+42), 75, 75);
+                g2.fill(rect6);
+                Shape rect7 = new Rectangle2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.fill(rect7);
+                Shape rect8 = new Rectangle2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.fill(rect8);
+                Shape rect9 = new Rectangle2D.Float((width/2+63), (height/2-102), 75, 75);
+                g2.fill(rect9);
+                Shape rect10 = new Rectangle2D.Float((width/2+63), (height/2+42), 75, 75);
+                g2.fill(rect10);
+                Shape rect11 = new Rectangle2D.Float((width/2-37), (height/2-167), 75, 75);
+                g2.fill(rect11);
+                Shape rect12 = new Rectangle2D.Float((width/2-37), (height/2+115), 75, 75);
+                g2.fill(rect12);
+            }
+           
+        }
+
+
+
+
+
+
+
+
+
+
+        else if(input.getSuit() == 2){
+            g2.setColor(red);
+
+            Shape oval1 = new Ellipse2D.Float((width/2)-225, (height/2)-300, 25, 25);
+            g2.fill(oval1);
+            
+
+            Shape oval2 = new Ellipse2D.Float((width/2)+200, (height/2)+275, 25, 25);
+            g2.fill(oval2);
+
+            g2.drawString(Integer.toString(input.getNum()), (width/2)-225, (height/2)-315);
+            g2.setFont(inverFont);
+            g2.drawString(Integer.toString(input.getNum()), (width/2)+225, (height/2)+315);
+
+            if(input.getNum() == 1){
+                Shape rect3 = new Ellipse2D.Float((width/2-37), (height/2-37), 75, 75);
+                g2.fill(rect3);
+            }
+            else if(input.getNum() == 2){
+                Shape rect3 = new Ellipse2D.Float((width/2-37), (height/2-237), 75, 75);
+                g2.fill(rect3);
+                Shape rect4 = new Ellipse2D.Float((width/2-37), (height/2+187), 75, 75);
+                g2.fill(rect4);
+            }
+            else if(input.getNum() == 3){
+                Shape rect3 = new Ellipse2D.Float((width/2-37), (height/2-237), 75, 75);
+                g2.fill(rect3);
+                Shape rect4 = new Ellipse2D.Float((width/2-37), (height/2+187), 75, 75);
+                g2.fill(rect4);
+                Shape rect5 = new Ellipse2D.Float((width/2-37), (height/2-37), 75, 75);
+                g2.fill(rect5);
+            }
+            else if(input.getNum() == 4){
+                Shape rect3 = new Ellipse2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.fill(rect3);
+                Shape rect4 = new Ellipse2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.fill(rect4);
+                Shape rect5 = new Ellipse2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.fill(rect5);
+                Shape rect6 = new Ellipse2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.fill(rect6);
+            }
+            
+            else if(input.getNum() == 5){
+                Shape rect3 = new Ellipse2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.fill(rect3);
+                Shape rect4 = new Ellipse2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.fill(rect4);
+                Shape rect5 = new Ellipse2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.fill(rect5);
+                Shape rect6 = new Ellipse2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.fill(rect6);
+                Shape rect7 = new Ellipse2D.Float((width/2-37), (height/2-37), 75, 75);
+                g2.fill(rect7);
+            }
+            else if(input.getNum() == 6){
+                Shape rect3 = new Ellipse2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.fill(rect3);
+                Shape rect4 = new Ellipse2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.fill(rect4);
+                Shape rect5 = new Ellipse2D.Float((width/2-137), (height/2-37), 75, 75);
+                g2.fill(rect5);
+                Shape rect6 = new Ellipse2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.fill(rect6);
+                Shape rect7 = new Ellipse2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.fill(rect7);
+                Shape rect8 = new Ellipse2D.Float((width/2+63), (height/2-37), 75, 75);
+                g2.fill(rect8);
+            }
+            else if(input.getNum() == 7){
+                Shape rect3 = new Ellipse2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.fill(rect3);
+                Shape rect4 = new Ellipse2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.fill(rect4);
+                Shape rect5 = new Ellipse2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.fill(rect5);
+                Shape rect6 = new Ellipse2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.fill(rect6);
+                Shape rect7 = new Ellipse2D.Float((width/2-137), (height/2-37), 75, 75);
+                g2.fill(rect7);
+                Shape rect8 = new Ellipse2D.Float((width/2+63), (height/2-37), 75, 75);
+                g2.fill(rect8);
+                Shape rect9 = new Ellipse2D.Float((width/2-37), (height/2-137), 75, 75);
+                g2.fill(rect9);
+            }
+            else if(input.getNum() == 8){
+                Shape rect3 = new Ellipse2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.fill(rect3);
+                Shape rect4 = new Ellipse2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.fill(rect4);
+                Shape rect5 = new Ellipse2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.fill(rect5);
+                Shape rect6 = new Ellipse2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.fill(rect6);
+                Shape rect7 = new Ellipse2D.Float((width/2-137), (height/2-37), 75, 75);
+                g2.fill(rect7);
+                Shape rect8 = new Ellipse2D.Float((width/2+63), (height/2-37), 75, 75);
+                g2.fill(rect8);
+                Shape rect9 = new Ellipse2D.Float((width/2-37), (height/2-137), 75, 75);
+                g2.fill(rect9);
+                Shape rect10 = new Ellipse2D.Float((width/2-37), (height/2+77), 75, 75);
+                g2.fill(rect10);
+            }
+            else if(input.getNum() == 9){
+                Shape rect3 = new Ellipse2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.fill(rect3);
+                Shape rect4 = new Ellipse2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.fill(rect4);
+                Shape rect5 = new Ellipse2D.Float((width/2-137), (height/2-102), 75, 75);
+                g2.fill(rect5);
+                Shape rect6 = new Ellipse2D.Float((width/2-137), (height/2+42), 75, 75);
+                g2.fill(rect6);
+                Shape rect7 = new Ellipse2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.fill(rect7);
+                Shape rect8 = new Ellipse2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.fill(rect8);
+                Shape rect9 = new Ellipse2D.Float((width/2+63), (height/2-102), 75, 75);
+                g2.fill(rect9);
+                Shape rect10 = new Ellipse2D.Float((width/2+63), (height/2+42), 75, 75);
+                g2.fill(rect10);
+                Shape rect11 = new Ellipse2D.Float((width/2-37), (height/2-37), 75, 75);
+                g2.fill(rect11);
+            }
+            else if(input.getNum() == 10){
+                Shape rect3 = new Ellipse2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.fill(rect3);
+                Shape rect4 = new Ellipse2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.fill(rect4);
+                Shape rect5 = new Ellipse2D.Float((width/2-137), (height/2-102), 75, 75);
+                g2.fill(rect5);
+                Shape rect6 = new Ellipse2D.Float((width/2-137), (height/2+42), 75, 75);
+                g2.fill(rect6);
+                Shape rect7 = new Ellipse2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.fill(rect7);
+                Shape rect8 = new Ellipse2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.fill(rect8);
+                Shape rect9 = new Ellipse2D.Float((width/2+63), (height/2-102), 75, 75);
+                g2.fill(rect9);
+                Shape rect10 = new Ellipse2D.Float((width/2+63), (height/2+42), 75, 75);
+                g2.fill(rect10);
+                Shape rect11 = new Ellipse2D.Float((width/2-37), (height/2-167), 75, 75);
+                g2.fill(rect11);
+                Shape rect12 = new Ellipse2D.Float((width/2-37), (height/2+115), 75, 75);
+                g2.fill(rect12);
+            }
+
+        }
+
+
+
+
+
+
+
+
+        else if(input.getSuit() == 3){
+            
+            Shape rect1 = new Rectangle2D.Float((width/2)-225, (height/2)-300, 25, 25);
+            g2.draw(rect1);
+            
+
+            Shape rect2 = new Rectangle2D.Float((width/2)+200, (height/2)+275, 25, 25);
+            g2.draw(rect2);
+
+            g2.drawString(Integer.toString(input.getNum()), (width/2)-225, (height/2)-315);
+            g2.setFont(inverFont);
+            g2.drawString(Integer.toString(input.getNum()), (width/2)+225, (height/2)+315);
+            
+            if(input.getNum() == 1){
+                Shape rect3 = new Rectangle2D.Float((width/2-37), (height/2-37), 75, 75);
+                g2.draw(rect3);
+            }
+            else if(input.getNum() == 2){
+                Shape rect3 = new Rectangle2D.Float((width/2-37), (height/2-237), 75, 75);
+                g2.draw(rect3);
+                Shape rect4 = new Rectangle2D.Float((width/2-37), (height/2+187), 75, 75);
+                g2.draw(rect4);
+            }
+            else if(input.getNum() == 3){
+                Shape rect3 = new Rectangle2D.Float((width/2-37), (height/2-237), 75, 75);
+                g2.draw(rect3);
+                Shape rect4 = new Rectangle2D.Float((width/2-37), (height/2+187), 75, 75);
+                g2.draw(rect4);
+                Shape rect5 = new Rectangle2D.Float((width/2-37), (height/2-37), 75, 75);
+                g2.draw(rect5);
+            }
+            else if(input.getNum() == 4){
+                Shape rect3 = new Rectangle2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.draw(rect3);
+                Shape rect4 = new Rectangle2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.draw(rect4);
+                Shape rect5 = new Rectangle2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.draw(rect5);
+                Shape rect6 = new Rectangle2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.draw(rect6);
+            }
+            
+            else if(input.getNum() == 5){
+                Shape rect3 = new Rectangle2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.draw(rect3);
+                Shape rect4 = new Rectangle2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.draw(rect4);
+                Shape rect5 = new Rectangle2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.draw(rect5);
+                Shape rect6 = new Rectangle2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.draw(rect6);
+                Shape rect7 = new Rectangle2D.Float((width/2-37), (height/2-37), 75, 75);
+                g2.draw(rect7);
+            }
+            else if(input.getNum() == 6){
+                Shape rect3 = new Rectangle2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.draw(rect3);
+                Shape rect4 = new Rectangle2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.draw(rect4);
+                Shape rect5 = new Rectangle2D.Float((width/2-137), (height/2-37), 75, 75);
+                g2.draw(rect5);
+                Shape rect6 = new Rectangle2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.draw(rect6);
+                Shape rect7 = new Rectangle2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.draw(rect7);
+                Shape rect8 = new Rectangle2D.Float((width/2+63), (height/2-37), 75, 75);
+                g2.draw(rect8);
+            }
+            else if(input.getNum() == 7){
+                Shape rect3 = new Rectangle2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.draw(rect3);
+                Shape rect4 = new Rectangle2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.draw(rect4);
+                Shape rect5 = new Rectangle2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.draw(rect5);
+                Shape rect6 = new Rectangle2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.draw(rect6);
+                Shape rect7 = new Rectangle2D.Float((width/2-137), (height/2-37), 75, 75);
+                g2.draw(rect7);
+                Shape rect8 = new Rectangle2D.Float((width/2+63), (height/2-37), 75, 75);
+                g2.draw(rect8);
+                Shape rect9 = new Rectangle2D.Float((width/2-37), (height/2-137), 75, 75);
+                g2.draw(rect9);
+            }
+            else if(input.getNum() == 8){
+                Shape rect3 = new Rectangle2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.draw(rect3);
+                Shape rect4 = new Rectangle2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.draw(rect4);
+                Shape rect5 = new Rectangle2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.draw(rect5);
+                Shape rect6 = new Rectangle2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.draw(rect6);
+                Shape rect7 = new Rectangle2D.Float((width/2-137), (height/2-37), 75, 75);
+                g2.draw(rect7);
+                Shape rect8 = new Rectangle2D.Float((width/2+63), (height/2-37), 75, 75);
+                g2.draw(rect8);
+                Shape rect9 = new Rectangle2D.Float((width/2-37), (height/2-137), 75, 75);
+                g2.draw(rect9);
+                Shape rect10 = new Rectangle2D.Float((width/2-37), (height/2+77), 75, 75);
+                g2.draw(rect10);
+            }
+            else if(input.getNum() == 9){
+                Shape rect3 = new Rectangle2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.draw(rect3);
+                Shape rect4 = new Rectangle2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.draw(rect4);
+                Shape rect5 = new Rectangle2D.Float((width/2-137), (height/2-102), 75, 75);
+                g2.draw(rect5);
+                Shape rect6 = new Rectangle2D.Float((width/2-137), (height/2+42), 75, 75);
+                g2.draw(rect6);
+                Shape rect7 = new Rectangle2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.draw(rect7);
+                Shape rect8 = new Rectangle2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.draw(rect8);
+                Shape rect9 = new Rectangle2D.Float((width/2+63), (height/2-102), 75, 75);
+                g2.draw(rect9);
+                Shape rect10 = new Rectangle2D.Float((width/2+63), (height/2+42), 75, 75);
+                g2.draw(rect10);
+                Shape rect11 = new Rectangle2D.Float((width/2-37), (height/2-37), 75, 75);
+                g2.draw(rect11);
+            }
+            else if(input.getNum() == 10){
+                Shape rect3 = new Rectangle2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.draw(rect3);
+                Shape rect4 = new Rectangle2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.draw(rect4);
+                Shape rect5 = new Rectangle2D.Float((width/2-137), (height/2-102), 75, 75);
+                g2.draw(rect5);
+                Shape rect6 = new Rectangle2D.Float((width/2-137), (height/2+42), 75, 75);
+                g2.draw(rect6);
+                Shape rect7 = new Rectangle2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.draw(rect7);
+                Shape rect8 = new Rectangle2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.draw(rect8);
+                Shape rect9 = new Rectangle2D.Float((width/2+63), (height/2-102), 75, 75);
+                g2.draw(rect9);
+                Shape rect10 = new Rectangle2D.Float((width/2+63), (height/2+42), 75, 75);
+                g2.draw(rect10);
+                Shape rect11 = new Rectangle2D.Float((width/2-37), (height/2-167), 75, 75);
+                g2.draw(rect11);
+                Shape rect12 = new Rectangle2D.Float((width/2-37), (height/2+115), 75, 75);
+                g2.draw(rect12);
+            }
+
+        }
+
+
+
+
+
+
+
+        else{
+            g2.setColor(red);
+
+            Shape oval1 = new Ellipse2D.Float((width/2)-225, (height/2)-300, 25, 25);
+            g2.draw(oval1);
+            
+
+            Shape oval2 = new Ellipse2D.Float((width/2)+200, (height/2)+275, 25, 25);
+            g2.draw(oval2);
+
+            g2.drawString(Integer.toString(input.getNum()), (width/2)-225, (height/2)-315);
+            g2.setFont(inverFont);
+            g2.drawString(Integer.toString(input.getNum()), (width/2)+225, (height/2)+315);
+
+            if(input.getNum() == 1){
+                Shape oval3 = new Ellipse2D.Float((width/2-37), (height/2-37), 75, 75);
+                g2.draw(oval3);
+            }
+            else if(input.getNum() == 2){
+                Shape oval3 = new Ellipse2D.Float((width/2-37), (height/2-237), 75, 75);
+                g2.draw(oval3);
+                Shape oval4 = new Ellipse2D.Float((width/2-37), (height/2+187), 75, 75);
+                g2.draw(oval4);
+            }
+            else if(input.getNum() == 3){
+                Shape oval3 = new Ellipse2D.Float((width/2-37), (height/2-237), 75, 75);
+                g2.draw(oval3);
+                Shape oval4 = new Ellipse2D.Float((width/2-37), (height/2+187), 75, 75);
+                g2.draw(oval4);
+                Shape oval5 = new Ellipse2D.Float((width/2-37), (height/2-37), 75, 75);
+                g2.draw(oval5);
+            }
+            else if(input.getNum() == 4){
+                Shape oval3 = new Ellipse2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.draw(oval3);
+                Shape oval4 = new Ellipse2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.draw(oval4);
+                Shape oval5 = new Ellipse2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.draw(oval5);
+                Shape oval6 = new Ellipse2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.draw(oval6);
+            }
+            
+            else if(input.getNum() == 5){
+                Shape oval3 = new Ellipse2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.draw(oval3);
+                Shape oval4 = new Ellipse2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.draw(oval4);
+                Shape oval5 = new Ellipse2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.draw(oval5);
+                Shape oval6 = new Ellipse2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.draw(oval6);
+                Shape oval7 = new Ellipse2D.Float((width/2-37), (height/2-37), 75, 75);
+                g2.draw(oval7);
+            }
+            else if(input.getNum() == 6){
+                Shape oval3 = new Ellipse2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.draw(oval3);
+                Shape oval4 = new Ellipse2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.draw(oval4);
+                Shape oval5 = new Ellipse2D.Float((width/2-137), (height/2-37), 75, 75);
+                g2.draw(oval5);
+                Shape oval6 = new Ellipse2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.draw(oval6);
+                Shape oval7 = new Ellipse2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.draw(oval7);
+                Shape oval8 = new Ellipse2D.Float((width/2+63), (height/2-37), 75, 75);
+                g2.draw(oval8);
+            }
+            else if(input.getNum() == 7){
+                Shape oval3 = new Ellipse2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.draw(oval3);
+                Shape oval4 = new Ellipse2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.draw(oval4);
+                Shape oval5 = new Ellipse2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.draw(oval5);
+                Shape oval6 = new Ellipse2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.draw(oval6);
+                Shape oval7 = new Ellipse2D.Float((width/2-137), (height/2-37), 75, 75);
+                g2.draw(oval7);
+                Shape oval8 = new Ellipse2D.Float((width/2+63), (height/2-37), 75, 75);
+                g2.draw(oval8);
+                Shape oval9 = new Ellipse2D.Float((width/2-37), (height/2-137), 75, 75);
+                g2.draw(oval9);
+            }
+            else if(input.getNum() == 8){
+                Shape oval3 = new Ellipse2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.draw(oval3);
+                Shape oval4 = new Ellipse2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.draw(oval4);
+                Shape oval5 = new Ellipse2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.draw(oval5);
+                Shape oval6 = new Ellipse2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.draw(oval6);
+                Shape oval7 = new Ellipse2D.Float((width/2-137), (height/2-37), 75, 75);
+                g2.draw(oval7);
+                Shape oval8 = new Ellipse2D.Float((width/2+63), (height/2-37), 75, 75);
+                g2.draw(oval8);
+                Shape oval9 = new Ellipse2D.Float((width/2-37), (height/2-137), 75, 75);
+                g2.draw(oval9);
+                Shape oval10 = new Ellipse2D.Float((width/2-37), (height/2+77), 75, 75);
+                g2.draw(oval10);
+            }
+            else if(input.getNum() == 9){
+                Shape oval3 = new Ellipse2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.draw(oval3);
+                Shape oval4 = new Ellipse2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.draw(oval4);
+                Shape oval5 = new Ellipse2D.Float((width/2-137), (height/2-102), 75, 75);
+                g2.draw(oval5);
+                Shape oval6 = new Ellipse2D.Float((width/2-137), (height/2+42), 75, 75);
+                g2.draw(oval6);
+                Shape oval7 = new Ellipse2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.draw(oval7);
+                Shape oval8 = new Ellipse2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.draw(oval8);
+                Shape oval9 = new Ellipse2D.Float((width/2+63), (height/2-102), 75, 75);
+                g2.draw(oval9);
+                Shape oval10 = new Ellipse2D.Float((width/2+63), (height/2+42), 75, 75);
+                g2.draw(oval10);
+                Shape oval11 = new Ellipse2D.Float((width/2-37), (height/2-37), 75, 75);
+                g2.draw(oval11);
+            }
+            else if(input.getNum() == 10){
+                Shape oval3 = new Ellipse2D.Float((width/2-137), (height/2-237), 75, 75);
+                g2.draw(oval3);
+                Shape oval4 = new Ellipse2D.Float((width/2-137), (height/2+187), 75, 75);
+                g2.draw(oval4);
+                Shape oval5 = new Ellipse2D.Float((width/2-137), (height/2-102), 75, 75);
+                g2.draw(oval5);
+                Shape oval6 = new Ellipse2D.Float((width/2-137), (height/2+42), 75, 75);
+                g2.draw(oval6);
+                Shape oval7 = new Ellipse2D.Float((width/2+63), (height/2-237), 75, 75);
+                g2.draw(oval7);
+                Shape oval8 = new Ellipse2D.Float((width/2+63), (height/2+187), 75, 75);
+                g2.draw(oval8);
+                Shape oval9 = new Ellipse2D.Float((width/2+63), (height/2-102), 75, 75);
+                g2.draw(oval9);
+                Shape oval10 = new Ellipse2D.Float((width/2+63), (height/2+42), 75, 75);
+                g2.draw(oval10);
+                Shape oval11 = new Ellipse2D.Float((width/2-37), (height/2-167), 75, 75);
+                g2.draw(oval11);
+                Shape oval12 = new Ellipse2D.Float((width/2-37), (height/2+115), 75, 75);
+                g2.draw(oval12);
+            }
+        }
+    }
+}
